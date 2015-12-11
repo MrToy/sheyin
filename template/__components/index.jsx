@@ -5,5 +5,5 @@ import NotMatchPage from "./notmatch"
 import Userinfo from "./userinfo"
 import NewsPage from "./newspage"
 import JiedaiPage from "./jiedai"
-import ConfigPage from "./config"
-export {Head,LoginDlg,Menus,NotMatchPage,Userinfo,NewsPage,JiedaiPage,ConfigPage}
+import ConfigIndexPage from "./config"
+export {Head,LoginDlg,Menus,NotMatchPage,Userinfo,NewsPage,JiedaiPage,ConfigIndexPage}

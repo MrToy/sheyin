@@ -5,7 +5,7 @@ import injectTapEventPlugin from "react-tap-event-plugin"
 import {createStore} from 'redux'
 import {Provider} from "react-redux"
 import {Router,Route} from "react-router"
-import {Head,LoginDlg,Menus,NotMatchPage,Userinfo,NewsPage,JiedaiPage,ConfigPage} from "./__components"
+import {Head,LoginDlg,Menus,NotMatchPage,Userinfo,ConfigIndexPage} from "./__components"
 
 injectTapEventPlugin()
 var store = createStore((state={}, action)=>{
@@ -32,16 +32,14 @@ ReactDOM.render(
 				<Menus style={{width:"10%",position:"absolute"}}/>
 				<div style={{width:"84%",marginLeft:"10%",borderLeft:"solid 1px #d9d9d9",padding:"2.9%",minHeight:720}}>
 					<Router>
-						<Route path="/" component={Userinfo} />
+						<Route path="/" component={ConfigIndexPage} />
 						<Route path="/个人信息" component={Userinfo} />
-						<Route path="/新闻管理" component={NewsPage} />
-						<Route path="/借贷管理" component={JiedaiPage} />
-						<Route path="/网站设置" component={ConfigPage} />
+						<Route path="/首页设置" component={ConfigIndexPage} />
 						<Route path="*" component={NotMatchPage}/>
 					</Router>
 				</div>
 			</section>
-			<footer style={{background:"#333",color:"#aaa",textAlign:"center",lineHeight:"100px"}}>Powered By 重庆久厘久科技网络有限公司</footer>
+			<footer style={{background:"#333",color:"#aaa",textAlign:"center",lineHeight:"100px"}}>Powered By Toy</footer>
 		</article>
 	</Provider>
 ,document.querySelector("#ui"))
