@@ -16,6 +16,7 @@ app.keys=['imtoy']
 router
 	.use('/user',routerUser.routes(),routerUser.allowedMethods())
 	.use('/db',routerDB.routes(),routerDB.allowedMethods())
+	.redirect('/admin', 'admin.html')
 app
 	.use(mongo({
 		host:process.env["MONGODB_PORT_27017_TCP_ADDR"]||'localhost',
