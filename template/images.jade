@@ -11,15 +11,15 @@ append style
 				padding:2em 5%;animation:rotateIn 2.0s ease;position:fixed;z-index:10;width:90%
 			#ui
 				.section
-					background-size:100% 100%;letter-spacing:1em
-					.big
-						font-size:3em;line-height:2em
-					.small
-						font-size:2em
+					background-size:100% 100%;
 					.movetop
-						transform:translateY(-100px)
+						transform:translateY(-50px)
+					.movebottom
+						transform:translateY(50px)
 			#p1
-				background:url(a2.jpg);letter-spacing:1em;font-size:4em
+				background:url(a2.jpg)
+				img
+					height:70px
 			#p2
 				background:url(a1.jpg)
 			#p3
@@ -28,15 +28,14 @@ append style
 				background:url(a3.jpg)
 block content
 	#ui
-		#p1.section 我们的摄影师
+		#p1.section
+			img(src="text1.png")
 		#p2.section
 			.movetop
-				.big ●弯树●
-				.small 唯美人像 ● ￥：350
+				img(src="text2.png")
 		#p3.section
-			.big ●爱上摄影的机械师●
-			.small 婚纱摄影 ● ￥：500
+			img(src="text3.png")
 		#p4.section
-			.big ●南風写真●
-			.small 清新日系 ● ￥：600
+			.movebottom
+				img(src="text4.png")
 	script(src="images.js")
