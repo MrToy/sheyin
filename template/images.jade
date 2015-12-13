@@ -19,7 +19,7 @@ append style
 			#p1
 				background:url(a2.jpg)
 				img
-					height:70px
+					height:70px;animation:fadeIn 2.0s ease
 			#p2
 				background:url(a1.jpg)
 			#p3
@@ -28,14 +28,14 @@ append style
 				background:url(a3.jpg)
 block content
 	#ui
-		#p1.section
+		.section#p1
 			img(src="text1.png")
-		#p2.section
+		a.section#p2(href="/wanshu.html")
 			.movetop
 				img(src="text2.png")
-		#p3.section
+		a.section#p3(href="/nanfeng.html")
 			img(src="text3.png")
-		#p4.section
+		a.section#p4(href="/jixieshi.html")
 			.movebottom
 				img(src="text4.png")
 	script(src="images.js")
