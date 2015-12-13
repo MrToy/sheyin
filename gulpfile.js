@@ -75,7 +75,8 @@ function buildfile(filepath){
 				module:{
 					entry:{index:filepath},
 					loaders:[
-						{test:/\.jsx?$/,loader:"babel",exclude:/(node_modules|bower_components)/}
+						{test:/\.jsx?$/,loader:"babel",exclude:/(node_modules|bower_components)/},
+						{test: /\.css$/,loader: 'style!css'},
 					]
 				}
 			})).pipe(uglify()).pipe(rename({extname:".js"})).pipe(gulp.dest(path.join(paths.dest,path.dirname(path.relative(paths.src,filepath))))).pipe(livereload())

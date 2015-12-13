@@ -2,83 +2,91 @@ doctype html
 html
 	head
 		title 摄影
-		style
-			:stylus
-				@keyframes scaleIn
-					0%
-						transform: scale(0.0)
-					100%
-						transform: scale(1.0)
-				@keyframes fadeIn
-					0%
-						transform:translateY(-100%);opacity:0
-					100%
-						transform:translateY(0);opacity:1
-				@keyframes fadeInBottom
-					0%
-						transform:translateY(100%);opacity:0
-					100%
-						transform:translateY(0);opacity:1
-				@keyframes rotateIn
-					0%
-						transform:rotateY(-180deg)
-					100%
-						transform:rotateY(0)
-				primary=#fff
-				body
-					min-width:600px;font-family:"YouYuan" "Microsoft YaHei";color:primary;text-align:center;margin:0;background:url(bg.jpg);height:100%;background-size:cover
-				.header
-					margin:3em;animation:rotateIn 2.0s ease
-					.logo
-						float:left
-						img
-							height:20px
-					.nav
-						float:right
-					.link
-						display:inline-block;line-height:2em;color:primary;text-decoration:none;margin:0 1em
-						&:hover
-							border-bottom:2px solid;height:30px;
-					&:after
-						content:"."; display:block; height:0; visibility:hidden;clear:both
-				.mainText
-					letter-spacing:1em;font-size:2em;margin:3em 0;animation: fadeIn 2.0s ease-in-out;
-					img
-						height:40px
-				.mainButton
-					transition:all 0.5s;cursor:pointer;margin:2em 0 7em ;letter-spacing:1em;font-size:1.5em;border:2px solid primary;display:inline-block;text-indent:1em;line-height:1.5em;animation:scaleIn 2.0s ease-in-out
-					&:hover
-						background:primary;color:#aaa
-				.footer
-					animation:fadeInBottom 2.0s ease
-					img
-						height:30px
-				@media(min-width:1000px)
+		block style
+			style
+				:stylus
+					@keyframes scaleIn
+						0%
+							transform: scale(0.0)
+						100%
+							transform: scale(1.0)
+					@keyframes fadeIn
+						0%
+							transform:translateY(-100%);opacity:0
+						100%
+							transform:translateY(0);opacity:1
+					@keyframes fadeInBottom
+						0%
+							transform:translateY(100%);opacity:0
+						100%
+							transform:translateY(0);opacity:1
+					@keyframes rotateIn
+						0%
+							transform:rotateY(-180deg)
+						100%
+							transform:rotateY(0)
+					primary=#fff
+					html
+						height:100%;filter:contrast(0.8)
+					body
+						min-width:600px;font-family:"YouYuan" "Microsoft YaHei";color:primary;text-align:center;margin:0;height:100%;background:url(a4.jpg);background-size:cover
+					a
+						color:primary;text-decoration:none
 					.header
-						font-size:20px
-						img
-							height:60px;width:auto
-						.link:hover
-							border-bottom:3px solid;height:37px
+						padding:3em;animation:rotateIn 2.0s ease
+						.logo
+							float:left
+							img
+								height:20px
+						.nav
+							float:right
+						.link
+							display:inline-block;line-height:2em;color:primary;text-decoration:none;margin:0 1em
+							&:hover
+								border-bottom:2px solid;height:30px;
+						&:after
+							content:"."; display:block; height:0; visibility:hidden;clear:both
 					.mainText
-						margin:5em 0;
-						img
-							height:60px
-					.mainButton
-						font-size:2em;border:3px solid primary
-					.footer
+						letter-spacing:1em;font-size:2em;padding:2em 0;animation: fadeIn 2.0s ease-in-out;
 						img
 							height:40px
+					.mainButton
+						transition:all 0.5s;cursor:pointer;margin:2em 0 7em ;letter-spacing:1em;font-size:1.5em;border:2px solid primary;display:inline-block;text-indent:1em;line-height:1.5em;animation:scaleIn 2.0s ease-in-out
+						&:hover
+							background:primary;color:#aaa
+					.footer
+						animation:fadeInBottom 2.0s ease
+						img
+							height:30px
+					@media(min-width:1000px)
+						.header
+							font-size:20px
+							img
+								height:60px;width:auto
+							.link:hover
+								border-bottom:2px solid;height:37px
+						.mainText
+							padding:5em 0;
+							img
+								height:60px
+						.mainButton
+							font-size:2em;border:2px solid primary
+						.footer
+							img
+								height:40px
 	body
-		.header
-			.logo
-				img(src="img1.png")
-			.nav
-				a.link(href="#") 首页
-				a.link(href="#") 联系我们
-				a.link(href="#") 我要入驻
-		.mainText
-			img(src="img2.png")
-		.mainButton 立即寻找
-		.footer
-			img(src="img3.png")
+		block header
+			.header
+				.logo
+					img(src="img1.png")
+				.nav
+					a.link(href="/") 首页
+					a.link(href="#") 联系我们
+					a.link(href="#") 我要入驻
+		block content
+			.mainText
+				img(src="img2.png")
+			a.mainButton(href="images.html") 立即寻找
+		block footer
+			.footer
+				img(src="img3.png")

@@ -1,0 +1,42 @@
+extends index
+block footer
+append style
+	style
+		:stylus
+			html
+				filter:none
+			body
+				background:none
+			.header
+				padding:2em 5%;animation:rotateIn 2.0s ease;position:fixed;z-index:10;width:90%
+			#ui
+				.section
+					background-size:100% 100%;letter-spacing:1em
+					.big
+						font-size:3em;line-height:2em
+					.small
+						font-size:2em
+					.movetop
+						transform:translateY(-100px)
+			#p1
+				background:url(a2.jpg);letter-spacing:1em;font-size:4em
+			#p2
+				background:url(a1.jpg)
+			#p3
+				background:url(a4.jpg)
+			#p4
+				background:url(a3.jpg)
+block content
+	#ui
+		#p1.section 我们的摄影师
+		#p2.section
+			.movetop
+				.big ●弯树●
+				.small 唯美人像 ● ￥：350
+		#p3.section
+			.big ●爱上摄影的机械师●
+			.small 婚纱摄影 ● ￥：500
+		#p4.section
+			.big ●南風写真●
+			.small 清新日系 ● ￥：600
+	script(src="images.js")

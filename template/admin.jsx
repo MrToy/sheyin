@@ -32,7 +32,7 @@ ReactDOM.render(
 				<Menus style={{width:"10%",position:"absolute"}}/>
 				<div style={{width:"84%",marginLeft:"10%",borderLeft:"solid 1px #d9d9d9",padding:"2.9%",minHeight:720}}>
 					<Router>
-						<Route path="/" component={ConfigIndexPage} />
+						<Route path="/" component={Userinfo} />
 						<Route path="/个人信息" component={Userinfo} />
 						<Route path="/首页设置" component={ConfigIndexPage} />
 						<Route path="*" component={NotMatchPage}/>
