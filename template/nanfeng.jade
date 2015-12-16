@@ -1,0 +1,99 @@
+doctype html
+html
+	head
+		title 摄影
+		block style
+			style
+				:stylus
+					@keyframes scaleIn
+						0%
+							transform: scale(0.0)
+						100%
+							transform: scale(1.0)
+					@keyframes fadeIn
+						0%
+							transform:translateY(-100%);opacity:0
+						100%
+							transform:translateY(0);opacity:1
+					@keyframes fadeInBottom
+						0%
+							transform:translateY(100%);opacity:0
+						100%
+							transform:translateY(0);opacity:1
+					@keyframes rotateIn
+						0%
+							transform:rotateY(-180deg)
+						100%
+							transform:rotateY(0)
+					@keyframes leftIn
+						0%
+							transform:translateX(-100%);opacity:0
+						100%
+							transform:translateX(0);opacity:1
+					@keyframes rightIn
+						0%
+							transform:translateX(100%);opacity:0
+						100%
+							transform:translateX(0);opacity:1
+					body
+						margin:0;min-width:700px
+						&>img
+							width:100%
+					a
+						color:#000;text-decoration:none
+					.main
+						padding:50px;text-align:center
+						.header
+							animation:rotateIn 2.0s ease
+							@media(min-width:1000px)
+								font-size:20px
+							.logo
+								float:left
+								img
+									height:20px
+									@media(min-width:1000px)
+										height:30px;width:auto
+							.nav
+								float:right
+							.link
+								display:inline-block;line-height:2em;color:primary;text-decoration:none;margin:0 1em
+								&:hover
+									border-bottom:2px solid;height:30px
+									@media(min-width:1000px)
+										border-bottom:2px solid;height:37px
+							&:after
+								content:"."; display:block; height:0; visibility:hidden;clear:both					
+						.i1
+							margin:20px;height:200px;animation:scaleIn 2.0s ease
+						.i2
+							height:20px
+						.i3
+							margin:30px;height:120px;animation:rightIn 2.0s ease
+						.i4
+							height:250px;margin:40px;animation:leftIn 2.0s ease
+						.line
+							border-bottom:2px solid
+						.i5
+							height:20px;margin:30px;animation:fadeInBottom 3.0s ease
+	body
+		block content
+			.main
+				.header
+					.logo
+						img(src="logo3.png")
+					.nav
+						a.link(href="/") 返回首页
+				img.i1(src="img4.png")
+				br
+				img.i2(src="南風写真.png")
+				br
+				img.i3(src="矩形5.png")
+				br
+				img.i4(src="形状3.png")
+				.line
+				img.i5(src="作品展示.png")
+			img(src="QQ图片20151209230247.jpg")
+			img(src="QQ图片20151209230250.jpg")
+			img(src="QQ图片20151209230256.jpg")
+			img(src="QQ图片20151209230258.jpg")
+			img(src="a3.jpg")
